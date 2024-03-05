@@ -9,7 +9,7 @@
       margin: 0;
       overflow: hidden;
     }
-    img {
+    picture img {
       max-width: 100%;
       height: auto;
       display: block;
@@ -18,6 +18,10 @@
   </style>
 </head>
 <body>
-  <img src="index.jpg" alt="CashyCats">
+  <picture>
+    <source media="(max-width: 767px)" srcset="index-mobile.jpg">
+    <source media="(min-width: 768px)" srcset="index-desktop.jpg">
+    <img src="index-desktop.jpg" alt="CashyCats">
+  </picture>
 </body>
 </html>
